@@ -1,3 +1,51 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 body{
     padding: 0;
     margin: 0;
@@ -12,6 +60,7 @@ body{
 
 }
 .parallax { 
+    position: absolute;
     /* The image used */
     background-image: url("img/parallax.jpg");
 
@@ -23,16 +72,36 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-box-shadow: inset 0px -110px 144px -131px rgba(0,0,0,1);
+-moz-box-shadow: inset 0px -110px 144px -131px rgba(0,0,0,1);
+box-shadow: inset 0px -110px 144px -131px rgba(0,0,0,1);
+}
+.parallax2 { 
+    position: absolute;
+    /* The image used */
+    background-image: url("img/card-image1.jpg");
+
+    /* Set a specific height */
+    height: 600px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-box-shadow: inset 0px -110px 144px -131px rgba(0,0,0,1);
+-moz-box-shadow: inset 0px -110px 144px -131px rgba(0,0,0,1);
+box-shadow: inset 0px -110px 144px -131px rgba(0,0,0,1);
 }
 .nav{
-    -webkit-box-shadow: inset -3px 34px 85px -20px rgba(0,0,0,1);
--moz-box-shadow: inset -3px 34px 85px -20px rgba(0,0,0,1);
-box-shadow: inset -3px 34px 85px -20px rgba(0,0,0,1);
+    -webkit-box-shadow: inset 0px 13px 16px -3px rgba(0,0,0,0.65);
+    -moz-box-shadow: inset 0px 13px 16px -3px rgba(0,0,0,0.65);
+    box-shadow: inset 0px 13px 16px -3px rgba(0,0,0,0.65);
     position: relative;
     top: 0;
     left: 0;
     margin: 0;
-    margin-top:-23px;
+    
     padding: 0;
     height: 80px;
     background: transparent;
@@ -89,15 +158,15 @@ ul li span+a:hover{
 
 .info{
     position: relative;
-    top: 250px;
-    left:420px;
-    background: ;
-    width: 500px;
+    top: 150px;
+    left: 600px;
+    width: 400px;
     height: 200px;
+    
+    
 }
 .info .info-text{
-    margin: 0px;
-    padding: 10px;
+   
     text-align: center;
     text-shadow: 1px 1px 5px black;
     font-family: 'Indie Flower', cursive;
@@ -106,25 +175,31 @@ ul li span+a:hover{
 
 }
 .button-info{
+   
     position: relative;
-    top:10px; 
+    left: 150px;
     text-align: center;
-    margin-top: 10px;
-    margin-left: 200px;
-    padding: 8px;
-    border: 2px solid#12776Fblack
+    padding: 14px;
+    top:40px;;
+    border: 2px solid #12776F;
     border-radius: 4px 4px;
-    background: #12776F;
-    text-decoration-line: none;
+    //*background: #12776F;*/
+    text-decoration-style: none;
     color: white;
     font-weight: 800px;
+    text-decoration-line: none;
 
 }
-
+.button-info:hover{
+    background: #12776F;
+    text-shadow: 1px 1px 20px black;
+    transition: all 0.8s;
+}
 /* ------------------MAIN----------------*/
 
 .container-card{
     top:550px;
+    height:90%;
     position:absolute;
     width: 90%;
     margin-top:;
@@ -137,4 +212,53 @@ box-shadow: -7px -6px 51px 0px rgba(0,0,0,1);
     background:  #E7F5F2 ;
     border-radius: 3px 3px;
     padding: 20px 30px;
+    overflow: hidden;
+}
+.card-image{
+    display: inline-block;
+    width: 25%;
+    height: auto;
+    margin: 20px 55px;
+}
+
+.card-image img{
+    position: relative;
+    top:0;
+    max-width: 350px;
+    max-height: 350px;
+    min-width: 350px;
+    min-height: 350px;
+    border-radius: 200px 200px;
+    cursor: pointer;
+}
+.card-image img:hover{
+    /*transform: rotate(360deg);*/
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+.card-image h2,p{
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+.card-image h2{
+    font-weight: 800;
+    font-size: 30px;
+}
+.galery{
+    position: relative;
+    left: 20px;;
+    margin: 30px;
+    padding: 20px;
+
+}
+.galery img{
+    margin: -2.5px;
+    cursor: pointer;
+}
+.galery img:hover{
+transform: scale(1.1);
+transition: all 0.3s;
+background-color: rgba(193, 191, 191, 0.414);
+box-shadow: 1px 1px 20px black;
 }
