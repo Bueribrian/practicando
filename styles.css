@@ -1,0 +1,140 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    
+
+}
+.container{
+    position: absolute;
+    width: 100%;
+
+}
+.parallax { 
+    /* The image used */
+    background-image: url("img/parallax.jpg");
+
+    /* Set a specific height */
+    height: 600px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav{
+    -webkit-box-shadow: inset -3px 34px 85px -20px rgba(0,0,0,1);
+-moz-box-shadow: inset -3px 34px 85px -20px rgba(0,0,0,1);
+box-shadow: inset -3px 34px 85px -20px rgba(0,0,0,1);
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    margin-top:-23px;
+    padding: 0;
+    height: 80px;
+    background: transparent;
+    width: 100%;
+    color: #E7F5F2 ;
+}
+h1{
+    float: left;
+    margin-left: 10px;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 25px;
+    cursor:pointer;
+}
+
+ul{
+    float: right;
+    list-style: none;
+}
+ul li{
+    display: inline-block;
+    margin: 25px;
+}
+ul li span a{
+    text-decoration-line: none;
+    color: #E7F5F2 ;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 200;
+    margin-left: 8px;
+    text-shadow: 2px 2px 1px black;
+
+}
+ul li span i{
+    text-shadow: 1px 1px 10px black;
+    color: white;
+}
+ul li span+a:hover{
+    margin: 20px;
+    transition: all 0.5s;
+    transform: translateX(360deg)
+}
+.nav span{
+    margin-right: 8px;
+    color: #12776F;
+    font-size: 20px;
+
+}
+.nav span:hover i{
+    transform: rotate(360deg);
+    transition: all 0.4s;
+    
+}
+
+.info{
+    position: relative;
+    top: 250px;
+    left:420px;
+    background: ;
+    width: 500px;
+    height: 200px;
+}
+.info .info-text{
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 5px black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    color: #E7F5F2;
+
+}
+.button-info{
+    position: relative;
+    top:10px; 
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 200px;
+    padding: 8px;
+    border: 2px solid#12776Fblack
+    border-radius: 4px 4px;
+    background: #12776F;
+    text-decoration-line: none;
+    color: white;
+    font-weight: 800px;
+
+}
+
+/* ------------------MAIN----------------*/
+
+.container-card{
+    top:550px;
+    position:absolute;
+    width: 90%;
+    margin-top:;
+    margin: 0 40px;
+    -webkit-box-shadow: -7px -6px 51px 0px rgba(0,0,0,1);
+-moz-box-shadow: -7px -6px 51px 0px rgba(0,0,0,1);
+box-shadow: -7px -6px 51px 0px rgba(0,0,0,1);
+    height: auto;
+    z-index: 10000;
+    background:  #E7F5F2 ;
+    border-radius: 3px 3px;
+    padding: 20px 30px;
+}
